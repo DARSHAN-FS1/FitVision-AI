@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "FitVision AI",
+    "slug": "fitvision-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a0c0f"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.fitvision.ai",
+      "infoPlist": {
+        "NSCameraUsageDescription": "FitVision AI needs camera access for AI pose detection and form analysis.",
+        "NSMicrophoneUsageDescription": "FitVision AI needs microphone access for video recording.",
+        "NSPhotoLibraryUsageDescription": "FitVision AI needs photo library access to save workout reports."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0a0c0f"
+      },
+      "package": "com.fitvision.ai",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "VIBRATE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow FitVision AI to access your camera for AI form analysis."
+        }
+      ]
+    ],
+    "extra": {
+      "API_BASE_URL": "http://localhost:8000",
+      "FIREBASE_API_KEY": "YOUR_FIREBASE_API_KEY",
+      "FIREBASE_AUTH_DOMAIN": "your-project.firebaseapp.com",
+      "FIREBASE_PROJECT_ID": "your-project-id",
+      "FIREBASE_STORAGE_BUCKET": "your-project.appspot.com",
+      "FIREBASE_MESSAGING_SENDER_ID": "YOUR_SENDER_ID",
+      "FIREBASE_APP_ID": "YOUR_APP_ID"
+    }
+  }
+}
